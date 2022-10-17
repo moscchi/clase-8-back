@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login con Google</title>
+</head>
+<style>
+    body {
+        display: flex;
+        height: 100vh;
+        color:blanchedalmond;
+        background-color: rgb(4, 22, 43);
+        justify-content: center;
+        align-items: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .login {
+        max-width: 500px;
+        border: 2px solid rgb(61, 151, 255);;
+        padding: 5px;
+        border-radius: 8px;
+    }
+    input {
+        height: 30px;
+        margin: 5px 5px;
+    }
+    .input-text {
+        width: 98.5%;
+        margin-left: 0px;
+        border-radius: 4px;
+    }
+    .input-text:nth-child(3){
+        margin-bottom: 10px;
+    }
+    form {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .input-submit {
+        
+    margin: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: background-color .218s,border-color .218s;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #dadce0;
+    color: #3c4043;
+    cursor: pointer;
+    font-family: "Google Sans",arial,sans-serif;
+    font-size: 14px;
+    height: 40px;
+    letter-spacing: 0.25px;
+    outline: none;
+    overflow: hidden;
+    padding: 0 12px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+    margin-bottom: 10px;
+    }
+    .input-submit:hover {
+        border-color: rgb(4, 22, 43);
+        background-color:rgb(61, 151, 255);
+        color: #dadce0;
+    }
+</style>
+  <body>
+    <div class="login">
+        <form action="" method="post">
+        <h1>Login by Numen</h1>
+            <input type="text" placeholder="Username" class="input-text" required>
+            <input type="password" placeholder="Password" class="input-text" required>
+            <input type="submit" value="Iniciar sesión" class="input-submit">
+        </form>
+      <script src="https://accounts.google.com/gsi/client" async defer></script>
+      <div id="g_id_onload"
+         data-client_id="YOUR_GOOGLE_CLIENT_ID"
+         data-login_uri="https://your.domain/your_login_endpoint"
+         data-auto_prompt="false">
+      </div>
+      <div class="g_id_signin"
+         data-type="standard"
+         data-size="large"
+         data-theme="outline"
+         data-text="sign_in_with"
+         data-shape="rectangular"
+         data-logo_alignment="left">
+      </div>
+    </div>
+</body>
+</html>
